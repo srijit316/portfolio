@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0c10" />
+    <title>Srijit Banerjee — Software Engineer & AI Builder</title>
+    <meta
+      name="description"
+      content="Srijit Banerjee — Computer Science & Economics at Davidson College. Voice AI, agentic evaluation pipelines, and predictive models. Founder of CaseMock."
+    />
+    <meta property="og:title" content="Srijit Banerjee — Software Engineer & AI Builder" />
+    <meta
+      property="og:description"
+      content="CS & Economics at Davidson College. Voice AI, agentic pipelines, and predictive modeling. Founder of CaseMock."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/headshot.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      // Set the theme before first paint so there's no flash of the wrong one.
+      (function () {
+        var saved = localStorage.getItem('theme')
+        var theme =
+          saved === 'light' || saved === 'dark'
+            ? saved
+            : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
