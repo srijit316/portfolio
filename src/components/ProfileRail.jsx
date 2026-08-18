@@ -10,8 +10,8 @@ export default function ProfileRail() {
         <img
           className="rail__photo"
           src={profile.headshot}
-          width="640"
-          height="800"
+          width="828"
+          height="1035"
           alt={`Portrait of ${profile.name}`}
         />
 
