@@ -480,6 +480,20 @@ img {
   letter-spacing: -0.02em;
 }
 
+/* Logos sit on white in both themes — several of these marks are near-black and
+   would vanish against the dark tile background. */
+.mark--logo {
+  background: #fff;
+  padding: 3px;
+}
+
+.mark__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .row__head {
   display: flex;
   align-items: baseline;

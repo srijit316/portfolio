@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Nav from './components/Nav.jsx'
 import ProfileRail from './components/ProfileRail.jsx'
 import SectionHeader from './components/SectionHeader.jsx'
@@ -27,10 +28,19 @@ const interestIcons = {
   chefhat: ChefHatIcon,
 }
 
-function Mark({ children }) {
+// Company logo in a tile, with the initials as a fallback. onError covers a
+// missing or broken file, so an entry without a logo still renders correctly.
+function Mark({ logo, initials }) {
+  const [failed, setFailed] = useState(false)
+  const showLogo = logo && !failed
+
   return (
-    <span className="mark" aria-hidden="true">
-      {children}
+    <span className={`mark${showLogo ? ' mark--logo' : ''}`} aria-hidden="true">
+      {showLogo ? (
+        <img className="mark__img" src={logo} alt="" loading="lazy" onError={() => setFailed(true)} />
+      ) : (
+        initials
+      )}
     </span>
   )
 }
@@ -64,7 +74,7 @@ export default function App() {
           <Reveal as="section" id="education" className="section">
             <SectionHeader title="Education" />
             <div className="row row--flush">
-              <Mark>{education.mark}</Mark>
+              <Mark logo={education.logo} initials={education.mark} />
               <div className="row__body">
                 <div className="row__head">
                   <h3>{education.school}</h3>
@@ -81,7 +91,7 @@ export default function App() {
             <SectionHeader title="Work Experience" />
             {experience.map((job) => (
               <article className="row row--card" key={job.org + job.role}>
-                <Mark>{job.mark}</Mark>
+                <Mark logo={job.logo} initials={job.mark} />
                 <div className="row__body">
                   <div className="row__head">
                     <h3>{job.org}</h3>

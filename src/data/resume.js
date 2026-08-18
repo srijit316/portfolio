@@ -80,6 +80,7 @@ export const experience = [
   {
     org: 'CaseMock',
     mark: 'CM',
+    logo: '/logos/casemock.svg',
     role: 'Founder',
     location: 'Davidson, NC',
   availability: 'Open to SWE + AI roles',
@@ -93,6 +94,7 @@ export const experience = [
   {
     org: 'Seattle Orcas (Major League Cricket)',
     mark: 'SO',
+    logo: '/logos/orcas.svg',
     role: 'Data & Ops Intern',
     location: 'United States',
     period: "May '26 – Jul '26",
@@ -105,6 +107,7 @@ export const experience = [
   {
     org: 'Deloitte',
     mark: 'D',
+    logo: '/logos/deloitte.png',
     role: 'Technology & Innovation Intern',
     location: 'Remote, India',
     period: "Jun '25 – Aug '25",
@@ -117,6 +120,7 @@ export const experience = [
   {
     org: 'Precisely',
     mark: 'P',
+    logo: '/logos/precisely.png',
     role: 'Sales Engineer Intern',
     location: 'Burlington, MA',
     period: "Jun '24 – Aug '24",
@@ -148,6 +152,7 @@ export const interests = [
 export const education = {
   school: 'Davidson College',
   mark: 'DC',
+  logo: '/logos/davidson.png',
   degree: 'Bachelor of Science in Computer Science, Economics minor',
   gpa: 'GPA: 3.91 / 4.00',
   period: 'Graduated May 2026',
