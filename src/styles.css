@@ -784,7 +784,8 @@ img {
   }
 
   .rail__photo {
-    height: 240px;
+    height: auto;
+    aspect-ratio: 5 / 4;
     min-height: 0;
   }
 
